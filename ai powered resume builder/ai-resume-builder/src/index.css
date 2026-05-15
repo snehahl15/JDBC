@@ -1,0 +1,58 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', sans-serif; background: #f0f4f8; color: #1a1a2e; }
+.app-container { min-height: 100vh; display: flex; flex-direction: column; }
+.app-header { background: #185FA5; color: white; padding: 1.5rem 2rem; text-align: center; }
+.app-header h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
+.app-header p { font-size: 0.9rem; opacity: 0.85; }
+.app-body { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; padding: 1.5rem; max-width: 1400px; margin: 0 auto; width: 100%; }
+.form-panel { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.tab-bar { display: flex; border-bottom: 2px solid #e8ecf0; margin-bottom: 1.25rem; }
+.tab { padding: 8px 16px; font-size: 13px; cursor: pointer; border: none; border-bottom: 2px solid transparent; margin-bottom: -2px; color: #666; background: none; }
+.tab.active { color: #185FA5; border-bottom-color: #185FA5; font-weight: 600; }
+.field-group { margin-bottom: 1rem; }
+.field-group label { display: block; font-size: 12px; color: #666; margin-bottom: 4px; font-weight: 500; }
+.field-group input, .field-group textarea { width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 13px; color: #1a1a2e; }
+.field-group input:focus, .field-group textarea:focus { outline: none; border-color: #185FA5; }
+.field-group textarea { resize: vertical; min-height: 70px; line-height: 1.5; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.role-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.25rem; }
+.chip { padding: 6px 14px; border-radius: 20px; font-size: 12px; border: 1px solid #ddd; background: white; cursor: pointer; color: #555; }
+.chip.active { background: #185FA5; color: white; border-color: #185FA5; font-weight: 500; }
+.ai-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 8px; font-size: 12px; background: #E6F1FB; color: #0C447C; border: 1px solid #B5D4F4; cursor: pointer; margin-top: 6px; font-weight: 500; }
+.ai-btn:hover { background: #B5D4F4; }
+.ai-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.suggestion-box { margin-top: 8px; background: #f8fbff; border: 1px solid #B5D4F4; border-radius: 8px; padding: 10px; }
+.suggestion-item { display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; border-bottom: 1px solid #e8f0fb; cursor: pointer; }
+.suggestion-item:last-child { border-bottom: none; }
+.sug-text { font-size: 12px; color: #185FA5; line-height: 1.5; flex: 1; }
+.use-btn { font-size: 11px; color: white; background: #185FA5; border: none; border-radius: 6px; padding: 3px 8px; cursor: pointer; }
+.exp-block { border: 1px solid #e8ecf0; border-radius: 10px; padding: 12px; margin-bottom: 12px; background: #fafbfc; }
+.add-btn { width: 100%; padding: 8px; border: 1px dashed #185FA5; background: transparent; color: #185FA5; border-radius: 8px; cursor: pointer; font-size: 13px; margin-top: 8px; }
+.add-btn:hover { background: #E6F1FB; }
+.skill-input-row { display: flex; gap: 8px; }
+.skill-input-row input { flex: 1; }
+.skill-input-row button { padding: 8px 14px; background: #185FA5; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 13px; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.skill-tag { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; background: #E6F1FB; color: #0C447C; border-radius: 12px; font-size: 12px; border: 1px solid #B5D4F4; }
+.skill-tag button { background: none; border: none; cursor: pointer; color: #888; font-size: 14px; }
+.loading { display: flex; gap: 4px; padding: 8px 0; }
+.loading span { width: 7px; height: 7px; border-radius: 50%; background: #185FA5; animation: bounce 1s infinite; }
+.loading span:nth-child(2) { animation-delay: 0.15s; }
+.loading span:nth-child(3) { animation-delay: 0.3s; }
+@keyframes bounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-6px)} }
+.preview-panel { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); position: sticky; top: 1.5rem; height: fit-content; }
+.preview-panel h2 { font-size: 15px; font-weight: 600; margin-bottom: 1rem; color: #333; }
+.resume-sheet { background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; min-height: 500px; }
+.resume-name { font-size: 22px; font-weight: 700; color: #1a1a2e; }
+.resume-role { font-size: 13px; color: #185FA5; margin-bottom: 4px; font-weight: 500; }
+.resume-contact { font-size: 11px; color: #666; margin-bottom: 14px; }
+.resume-section { margin-bottom: 14px; }
+.resume-section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #185FA5; border-bottom: 1.5px solid #185FA5; padding-bottom: 3px; margin-bottom: 8px; }
+.resume-exp-title { font-size: 12px; font-weight: 600; color: #1a1a2e; }
+.resume-exp-sub { font-size: 11px; color: #666; margin-bottom: 4px; }
+.resume-bullet { font-size: 11px; color: #333; line-height: 1.6; padding-left: 12px; position: relative; margin-bottom: 2px; }
+.resume-bullet::before { content: "•"; position: absolute; left: 0; color: #185FA5; }
+.resume-skills { display: flex; flex-wrap: wrap; gap: 5px; }
+.resume-skill { font-size: 10px; padding: 3px 9px; border-radius: 10px; background: #E6F1FB; color: #0C447C; border: 1px solid #B5D4F4; }
+.download-btn { width: 100%; margin-top: 1rem; padding: 10px; background: #185FA5; color: white; border: none; border-radius: 8px; font-size: 14px; cursor: pointer; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.download-btn:hover { background: #0C447C; }
